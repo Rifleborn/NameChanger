@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\NameChanger\NameChanger\bin\Debug\NameChanger.exe.config
+C:\Users\User\source\repos\NameChanger\NameChanger\bin\Debug\NameChanger.exe
+C:\Users\User\source\repos\NameChanger\NameChanger\bin\Debug\NameChanger.pdb
+C:\Users\User\source\repos\NameChanger\NameChanger\obj\Debug\NameChanger.csprojAssemblyReference.cache
+C:\Users\User\source\repos\NameChanger\NameChanger\obj\Debug\NameChanger.Form1.resources
+C:\Users\User\source\repos\NameChanger\NameChanger\obj\Debug\NameChanger.Properties.Resources.resources
+C:\Users\User\source\repos\NameChanger\NameChanger\obj\Debug\NameChanger.csproj.GenerateResource.cache
+C:\Users\User\source\repos\NameChanger\NameChanger\obj\Debug\NameChanger.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\NameChanger\NameChanger\obj\Debug\NameChanger.exe
+C:\Users\User\source\repos\NameChanger\NameChanger\obj\Debug\NameChanger.pdb
