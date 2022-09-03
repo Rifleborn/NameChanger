@@ -14,23 +14,32 @@ namespace NameChanger
     //partial??
     public partial class Form1 : Form
     {
-        private static string SITE_PREFIX = "y2mate.com - ";
+        private static string SITE_PREFIX;
 
         public Form1()
         {
             InitializeComponent();
+            SITE_PREFIX = prefixTextBox.Text;
         }
 
         private void changeFileButton_Click(object sender, EventArgs e)
         {
+            
+            if (oldAudioList.Items.Count != 0) {
+                oldAudioList.Items.Clear();
+            }
+            if (newAudioList.Items.Count != 0){
+                newAudioList.Items.Clear();
+            }
+            
+            SITE_PREFIX = prefixTextBox.Text;
+
             string[] audioFiles = Directory.GetFiles(@"C:\Users\User\Downloads", "*.mp3");
             Console.WriteLine("audioFiles size: " + audioFiles.Length);
 
-            try { 
-            Console.WriteLine(audioFiles[0]);
-            Console.WriteLine(audioFiles[1]);
-            } catch (Exception exc) {
-                Console.WriteLine(exc.ToString());
+            //add old names of files to listView
+            foreach (string oldAudioName in audioFiles) {
+                oldAudioList.Items.Add(oldAudioName.Replace(@"C:\Users\User\Downloads\", ""));
             }
 
             List<string> newNames = new List<string>();
@@ -43,13 +52,29 @@ namespace NameChanger
                     System.IO.File.Move(oldNameOfFile, newFileName);
                 }
             }
-            try
-            {
-                Console.WriteLine(newNames[0]);
-                Console.WriteLine(newNames[1]);
-            } catch (Exception exc) {
-                Console.WriteLine(exc.ToString());
+
+            //add NEW names of files to listView
+            foreach (string newName in newNames) {
+                newAudioList.Items.Add(newName.Replace(@"C:\Users\User\Downloads\", ""));
             }
+
+            numberOfAudiofiles.Text = Convert.ToString(newNames.Count);
+
+        }
+
+        private void numberOfAudiofiles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void oldAudioList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
